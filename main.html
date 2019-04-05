@@ -4,7 +4,30 @@
     <meta charset="UTF-8">
     <title>Genome application</title>
 </head>
-<body>
+<body style="background-color: lightyellow;">
+    <h1>Main page</h1>
+    <h2>Genome page!</h2>
+<p>What do you need to know?</p>
+ <form action = "listSpecies">
+     Species list:
+     How many species do you want to know?
+     <input type="text" name="limit=">
+      <br><br>
+       <input type="submit" value="Get species info">
+ </form>
+ <form action = "karyotype">
+  Karyotype list:
+  Whose karyotype do you want to know?
+  <input type="text" name="specie">
+   <br><br>
+    <input type="submit" value="Get species karyotype">
+</form>
+<form action = "chromsomeLength">
+  Chromosome length:
+  What chromosome's length do you want to know?
+  <input type="text" name="specie">
+   <br><br>
+    <input type="submit" value="Get length">
+</form>
 
-</body>
-</html>
+
