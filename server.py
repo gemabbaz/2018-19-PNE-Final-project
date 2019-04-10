@@ -15,7 +15,6 @@ ENDPOINT3 = "/info/assembly/"
 
 METHOD = "GET"
 
-
 # -- Here we can define special headers if needed
 headers = {'User-Agent': 'http-client'}
 
@@ -37,9 +36,10 @@ if 'species' in ENDPOINT1:
     for i in range(len(names)):
         list1.append(names[i]["display_name"])
 
+
 def karyotype_function(type):
     conn = http.client.HTTPSConnection(HOSTNAME)
-    conn.request(METHOD, ENDPOINT2+type+"?content-type=application/json", None, headers)
+    conn.request(METHOD, ENDPOINT2 + type + "?content-type=application/json", None, headers)
     # -- Print the status
     r1 = conn.getresponse()
     print()
@@ -47,28 +47,8 @@ def karyotype_function(type):
     print(r1.status, r1.reason)
     text_json = r1.read().decode("utf-8")
     karyotype = json.loads(text_json)
-    list2 = karyotype["karyotype"]
 
-    return list2
-
-def chromosome_function(type):
-    conn = http.client.HTTPSConnection(HOSTNAME)
-    type = input("Introduce the specie you want to know the chromosome length of: ")
-    conn.request(METHOD, ENDPOINT3+type+"?content-type=application/json", None, headers)
-    # -- Print the status
-    r1 = conn.getresponse()
-    print()
-    print("Response received: ", end='')
-    print(r1.status, r1.reason)
-    text_json = r1.read().decode("utf-8")
-    length = json.loads(text_json)
-    list3 = length["top_level_region"]
-    list3_names = []
-    for i in range(len(list3)):
-        list3_names.append(list3[i]["length"])
-
-    return list3_names
-
+    return karyotype
 
 
 class TestHandler(http.server.BaseHTTPRequestHandler):
@@ -82,56 +62,121 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
             content = file.read()
             file.close()
         elif "listSpecies" in self.path:
+            listspecies = "List of species available: " + "\n"
+            listspecies2 = " "
             if "limit" in self.path:
-                limit = self.path[self.path.find("=")+1:]
+                limit = self.path[self.path.find("=") + 1:]
                 if limit == '':
-                    listspecies = "List of species available: " + "\n"
-                    listspecies2 = " "
                     for i in list1:
-                        listspecies2 += "\t" + i + "\n"
+                        listspecies2 += "Specie: " + i + "<br>"
+                elif limit.isalpha():
+                    listspecies2 += "Your limit must be an integer!"
                 else:
                     limit = int(limit)
-                    listspecies = " We'll show " + str(limit) + " out of " + str(len(list1)) + " species"
-                    listspecies2 = " "
-                    for i in range(limit):
-                        listspecies2 += "\t" + list1[i] + "," + "\n"
+                    if limit > len(list1) or limit <= 0:
+                        listspecies += "Your limit must be an integer between 0 and " + str(len(list1))
+                        listspecies2 += "Try again"
+                    else:
+                        listspecies = " We'll show " + str(limit) + " out of " + str(len(list1)) + " species"
+                        listspecies2 = " "
+                        for i in range(limit):
+                            listspecies2 += "Specie nº " + str(i + 1) + ": " + list1[i] + "<br>"
             else:
-                listspecies = "List of available species: " + "\n"
+                listspecies = "Available species: " + "\n"
                 listspecies2 = " "
                 for i in list1:
                     listspecies2 += "\t" + i + "\n"
+            content = """
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Information of species: </title>
+                    </head>
+                    <body style="background-color: lightgreen;">
+                        <h1>{}</h1>
+                        <h2>{}</h2>
 
-
-            file = open("listSpecies.html")
-            content = file.read().format(listspecies, listspecies2)
-            file.close()
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+                    """.format(listspecies, listspecies2)
 
         elif "karyotype" in self.path:
-            type = self.path[self.path.find("=")+1:]
+            type = self.path[self.path.find("=") + 1:]
+            type = type.replace("+", "")
             info2 = karyotype_function(type)
             chromosomes = ""
-            for i in range(len(info2)):
-                chromosomes += info2[i] + "\n"
-            message = "The karyotype of this specie is: "
+            message = type.upper()
+            if "karyotype" in info2:
+                list2 = info2["karyotype"]
+                for i in range(len(list2)):
+                    chromosomes += list2[i] + "\n"
 
-            file = open("karyotype.html")
-            content = file.read().format(message, chromosomes)
-            file.close()
+            else:
+                chromosomes += "Either we do not have the information for that specie or that specie does not exist! "
+            print(message, chromosomes)
+
+            content = """
+                    <!DOCTYPE html>
+                    <html lang = "en">
+                    <head>
+                        <meta charset = "UTF-8">
+                        <title>Information of karyotypes:</title>
+                    </head>
+                    <body style="background-color: lightgreen;">
+                        <h1>{}</h1>
+                        <h2>{}</h2>
+
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+                    """.format(message, chromosomes)
 
         elif "chromosomeLength" in self.path:
-            type = self.path[self.path.find("=") + 1:]
-            info3 = chromosome_function(type)
-            chromosomes = ""
-            for i in range(len(info3)):
-                chromosomes += info3[i] + "\n"
-            message = "The length of the chromosome is: "
+            type = self.path[self.path.find("=") + 1:self.path.find("&")]
+            print(type)
+            length = karyotype_function(type)
+            message = type.upper()
+            if "top_level_region" in length:
+                list3 = length["top_level_region"]
+                list3_names = []
+                for i in range(len(list3)):
+                    list3_names.append(list3[i]["length"])
+                num = int(self.path[self.path.find("o=") + 2:])
+                length1 = list3_names[num - 1]
+                msg = str(length1)
+                print(msg)
+            else:
+                msg = "There is not available information for " + type
 
-            file = open("chromsome_length.html")
-            content = file.read().format(message, chromosomes)
-            file.close()
+
+            content = """
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Information of chromosome's length: </title>
+                    </head>
+                    <body style="background-color: lightgreen;">
+                        <h1>CHROMOSOME LENGTH</h1>
+                        
+                        <fieldset>
+                            <legend>{}</legend>
+                            <p>{}</p>
+                        </fieldset>
 
 
-        self.send_response(200);
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+                    """.format(message, msg)
+        else:
+            f = open('error.html', 'r')
+            content = f.read()
+            f.close()
+
+        self.send_response(200)
         self.send_header('Content-Type', 'text/html')
         self.send_header('Content-Length', len(str.encode(content)))
         self.end_headers()
@@ -139,9 +184,9 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
         self.wfile.write(str.encode(content))
         return
 
+
 Handler = TestHandler
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
-
     print("Serving at PORT", PORT)
 
     # -- Main loop: Attend the client. Whenever there is a new
@@ -153,6 +198,3 @@ with socketserver.TCPServer(("", PORT), Handler) as httpd:
         print("")
         print("Stoped by the user")
         httpd.server_close()
-
-
-
