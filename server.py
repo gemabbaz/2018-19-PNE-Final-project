@@ -115,7 +115,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
             else:
                 chromosomes += "Either we do not have the information for that specie or that specie does not exist! "
-            print(message, chromosomes)
+            print(message, chromosomes) #testing
 
             content = """
                     <!DOCTYPE html>
