@@ -12,6 +12,9 @@ HOSTNAME = "rest.ensembl.org"
 ENDPOINT1 = "/info/species?content-type=application/json"
 ENDPOINT2 = "/info/assembly/"
 ENDPOINT3 = "/info/assembly/"
+ENDPOINT4 = "/sequence/id/"
+ENDPOINT5 = "/lookup/symbol/homo_sapiens/"
+
 
 METHOD = "GET"
 
@@ -49,6 +52,38 @@ def karyotype_function(type):
     karyotype = json.loads(text_json)
 
     return karyotype
+
+def human_sequence(specie):
+    conn = http.client.HTTPSConnection(HOSTNAME)
+    conn.request(METHOD, ENDPOINT4 + specie + "?content-type=application/json", None, headers)
+    # -- Print the status
+    r1 = conn.getresponse()
+    print()
+    print("Response received: ", end='')
+    print(r1.status, r1.reason)
+    text_json = r1.read().decode("utf-8")
+    human = json.loads(text_json)
+    print(human)
+    sequence = human['seq']
+
+    return sequence
+
+def gene_function(gene):
+    conn = http.client.HTTPSConnection(HOSTNAME)
+    conn.request(METHOD, ENDPOINT5 + gene + "?expand=1;content-type=application/json", None, headers)
+    # -- Print the status
+    r1 = conn.getresponse()
+    print()
+    print("Response received: ", end='')
+    print(r1.status, r1.reason)
+    text_json = r1.read().decode("utf-8")
+    gen = json.loads(text_json)
+    print(gen)
+    if 'id' in gen:
+        id = gen['id']
+    else:
+        id = '0'
+    return id
 
 
 class TestHandler(http.server.BaseHTTPRequestHandler):
@@ -115,7 +150,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
             else:
                 chromosomes += "Either we do not have the information for that specie or that specie does not exist! "
-            print(message, chromosomes) #testing holaaa
+            print(message, chromosomes)
 
             content = """
                     <!DOCTYPE html>
@@ -135,7 +170,6 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
 
         elif "chromosomeLength" in self.path:
             type = self.path[self.path.find("=") + 1:self.path.find("&")]
-            print(type)
             length = karyotype_function(type)
             message = type.upper()
             if "top_level_region" in length:
@@ -171,6 +205,34 @@ class TestHandler(http.server.BaseHTTPRequestHandler):
                     </body>
                     </html>
                     """.format(message, msg)
+
+        elif "geneSeq" in self.path:
+            specie = self.path[self.path.find("=") + 1:]
+            print(specie)
+            info4 = gene_function(specie)
+            print(info4)
+            if info4 == 0:
+                message = "No information available"
+            else:
+                sequence = human_sequence(info4) #info4 is your sequence
+                message = "Sequence for that gene: " + sequence
+            content = """
+                                <!DOCTYPE html>
+                                <html lang="en">
+                                <head>
+                                    <meta charset="UTF-8">
+                                    <title>Information of gene sequence: </title>
+                                </head>
+                                <body style="background-color: lightgreen;">
+                                    <h1>GENE SEQUENCE</h1>
+                                    <h2>{}</h2>
+
+                                <a href="/">Main page</a>
+                                </body>
+                                </html>
+                                """.format(message)
+
+
         else:
             f = open('error.html', 'r')
             content = f.read()
