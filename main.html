@@ -5,39 +5,65 @@
     <title>Genome application</title>
 </head>
 <body style="background-color: lightyellow;">
-    <h1>Main page</h1>
-    <h2>Genome page!</h2>
-<p>What do you need to know?</p>
+<h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> WELCOME TO THE GENOME PROJECT!</h1>
+<h2 style="color:lightgreen;font-family:arial;font-size:150%;text-align:center">What information do you want to get?</h2>
+<p></p>
  <form action = "listSpecies">
      Species list:
      How many species do you want to know?
-     <input type="text" name="limit=">
+     <input type="text" name="limit" style="background-color:lightgreen">
       <br><br>
-       <input type="submit" value="Get species info">
+       <input type="submit" value="Get species info" style="background-color:lightgreen">
  </form>
  <form action = "karyotype">
   Karyotype list:
   Whose karyotype do you want to know?
-  <input type="text" name="type">
+  <input type="text" name="specie" style="background-color:lightgreen">
    <br><br>
-    <input type="submit" value="Get species karyotype">
+    <input type="submit" value="Get species karyotype" style="background-color:lightgreen">
 </form>
 <form action = "chromosomeLength">
   Chromosome length:
   What chromosome's specie do you want to know?
-  <input type="text" name="type">
+  <input type="text" name="specie" style="background-color:lightgreen">
    <br><br>
     Introduce the number of chromosome:
-    <input type="text" name="chromo">
+    <input type="text" name="chromo" style="background-color:lightgreen">
     <br><br>
-    <input type="submit" value="Get the length of chromosome">
+    <input type="submit" value="Get the length of chromosome" style="background-color:lightgreen">
 </form>
 <form action = "geneSeq">
-  Karyotype list:
-  Whose karyotype do you want to know?
-  <input type="text" name="gene">
+  Human gene:
+  Introduce the human gene:
+  <input type="text" name="gene" style="background-color:lightgreen">
    <br><br>
-    <input type="submit" value="Get species karyotype">
+    <input type="submit" value="Get gene's sequence" style="background-color:lightgreen">
 </form>
-
+<form action = "geneInfo">
+  Human gene information:
+  Introduce the human gene you want to know the info about:
+  <input type="text" name="gene" style="background-color:lightgreen">
+   <br><br>
+    <input type="submit" value="Get gene's sequence information" style="background-color:lightgreen">
+</form>
+<form action = "geneCalc">
+  Human gene calculations:
+  Introduce the human gene:
+  <input type="text" name="gene" style="background-color:lightgreen">
+   <br><br>
+    <input type="submit" value="Get gene's calculations" style="background-color:lightgreen">
+</form>
+<form action = "geneList">
+  Gene list:
+  What chromosome's genes do you want to know?
+  <input type="text" name="chromo" style="background-color:lightgreen">
+   <br><br>
+    Introduce the start position:
+    <input type="text" name="start" style="background-color:lightgreen">
+    <br><br>
+    Introduce the end position:
+    <input type="text" name="end" style="background-color:lightgreen">
+    <br><br>
+    <input type="submit" value="Get the gene's info" style="background-color:lightgreen">
+</form>
 

@@ -1,0 +1,448 @@
+Hello!
+
+------------------------------------------------------
+
+FUNCTION /listSpecies
+
+·Try: http://localhost:8000/listSpecies?limit=10
+<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Information of species: </title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <fieldset>
+                            <legend style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> WE'LL SHOW 10 OUT OF 199 SPECIES</legend>
+                            <p style="color:black;font-family:arial;font-size:100%"> Specie nº 1: Flycatcher<br>Specie nº 2: American beaver<br>Specie nº 3: C.intestinalis<br>Specie nº 4: Central bearded dragon<br>Specie nº 5: Golden-collared manakin<br>Specie nº 6: Steppe mouse<br>Specie nº 7: White-throated sparrow<br>Specie nº 8: Kangaroo rat<br>Specie nº 9: Gibbon<br>Specie nº 10: Mouse FVB/NJ<br></p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/listSpecies?limit=200
+<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Information of species: </title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <fieldset>
+                            <legend style="color:lightgreen;font-family:arial;font-size:250%;text-align:center">LIST OF AVAILABLE SPECIES:
+</legend>
+                            <p style="color:black;font-family:arial;font-size:100%"> Your limit must be an integer between 0 and 199 Try again</p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/listSpecies?limit=0
+<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Information of species: </title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <fieldset>
+                            <legend style="color:lightgreen;font-family:arial;font-size:250%;text-align:center">LIST OF AVAILABLE SPECIES:
+</legend>
+                            <p style="color:black;font-family:arial;font-size:100%"> Your limit must be an integer between 0 and 199 Try again</p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/listSpecies?limit=199
+<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Information of species: </title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <fieldset>
+                            <legend style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> WE'LL SHOW 199 OUT OF 199 SPECIES</legend>
+                            <p style="color:black;font-family:arial;font-size:100%"> Specie nº 1: Flycatcher<br>Specie nº 2: American beaver<br>Specie nº 3: C.intestinalis<br>Specie nº 4: Central bearded dragon<br>Specie nº 5: Golden-collared manakin<br>Specie nº 6: Steppe mouse<br>Specie nº 7: White-throated sparrow<br>Specie nº 8: Kangaroo rat<br>Specie nº 9: Gibbon<br>Specie nº 10: Mouse FVB/NJ<br>Specie nº 11: Mummichog<br>Specie nº 12: Algerian mouse<br>Specie nº 13: Guppy<br>Specie nº 14: Clown anemonefish<br>Specie nº 15: Mongolian gerbil<br>Specie nº 16: Saccharomyces cerevisiae<br>Specie nº 17: Paramormyrops kingsleyae<br>Specie nº 18: Lesser Egyptian jerboa<br>Specie nº 19: Mouse C3H/HeJ<br>Specie nº 20: Orange clownfish<br>Specie nº 21: Hedgehog<br>Specie nº 22: Koala<br>Specie nº 23: Spiny chromis<br>Specie nº 24: Blue-crowned manakin<br>Specie nº 25: American mink<br>Specie nº 26: Guinea Pig<br>Specie nº 27: Horse<br>Specie nº 28: Armadillo<br>Specie nº 29: Burton's mouthbrooder<br>Specie nº 30: Crab-eating macaque<br>Specie nº 31: Japanese quail<br>Specie nº 32: Budgerigar<br>Specie nº 33: Naked mole-rat male<br>Specie nº 34: Ma's night monkey<br>Specie nº 35: Polar bear<br>Specie nº 36: Greater bamboo lemur<br>Specie nº 37: Sailfin molly<br>Specie nº 38: Mangrove rivulus<br>Specie nº 39: Great spotted kiwi<br>Specie nº 40: Argentine black and white tegu<br>Specie nº 41: Coquerel's sifaka<br>Specie nº 42: Donkey<br>Specie nº 43: Brazilian guinea pig<br>Specie nº 44: Duck<br>Specie nº 45: Zebrafish<br>Specie nº 46: Northern American deer mouse<br>Specie nº 47: Common canary<br>Specie nº 48: Golden Hamster<br>Specie nº 49: Channel catfish<br>Specie nº 50: Western mosquitofish<br>Specie nº 51: Swamp eel<br>Specie nº 52: Bengalese finch<br>Specie nº 53: Cat<br>Specie nº 54: Platypus<br>Specie nº 55: Little spotted kiwi<br>Specie nº 56: Tuatara<br>Specie nº 57: Shortfin molly<br>Specie nº 58: Drosophila melanogaster<br>Specie nº 59: Tasmanian devil<br>Specie nº 60: Zebra mbuna<br>Specie nº 61: Mouse WSB/EiJ<br>Specie nº 62: Ballan wrasse<br>Specie nº 63: Great Tit<br>Specie nº 64: Helmeted guineafowl<br>Specie nº 65: Lamprey<br>Specie nº 66: Spotted gar<br>Specie nº 67: Monterrey platyfish<br>Specie nº 68: Upper Galilee mountains blind mole rat<br>Specie nº 69: Pika<br>Specie nº 70: Sloth<br>Specie nº 71: Chimpanzee<br>Specie nº 72: Bolivian squirrel monkey<br>Specie nº 73: Ferret<br>Specie nº 74: Agassiz's desert tortoise<br>Specie nº 75: Arctic ground squirrel<br>Specie nº 76: Mouse PWK/PhJ<br>Specie nº 77: Japanese medaka HdrR<br>Specie nº 78: Megabat<br>Specie nº 79: Abingdon island giant tortoise<br>Specie nº 80: Black snub-nosed monkey<br>Specie nº 81: Mexican tetra<br>Specie nº 82: Lyretail cichlid<br>Specie nº 83: Mouse CAST/EiJ<br>Specie nº 84: Lesser hedgehog tenrec<br>Specie nº 85: Zebra Finch<br>Specie nº 86: Elephant<br>Specie nº 87: Capuchin<br>Specie nº 88: Anole lizard<br>Specie nº 89: Panda<br>Specie nº 90: Daurian ground squirrel<br>Specie nº 91: Pig<br>Specie nº 92: Mouse<br>Specie nº 93: Mouse NZO/HlLtJ<br>Specie nº 94: Spoon-billed sandpiper<br>Specie nº 95: Wallaby<br>Specie nº 96: Tiger tail seahorse<br>Specie nº 97: Cow<br>Specie nº 98: American bison<br>Specie nº 99: Mouse A/J<br>Specie nº 100: Japanese medaka HSOK<br>Specie nº 101: Bonobo<br>Specie nº 102: Gorilla<br>Specie nº 103: Emu<br>Specie nº 104: Okarito brown kiwi<br>Specie nº 105: Dog<br>Specie nº 106: Chilean tinamou<br>Specie nº 107: Sheepshead minnow<br>Specie nº 108: Chinese hamster PICR<br>Specie nº 109: Alpaca<br>Specie nº 110: Blue tit<br>Specie nº 111: Zig-zag eel<br>Specie nº 112: Pig-tailed macaque<br>Specie nº 113: Ryukyu mouse<br>Specie nº 114: Angola colobus<br>Specie nº 115: Sheep<br>Specie nº 116: Drill<br>Specie nº 117: Eastern happy<br>Specie nº 118: Japanese medaka HNI<br>Specie nº 119: Cod<br>Specie nº 120: Hagfish<br>Specie nº 121: Tarsier<br>Specie nº 122: Indian medaka<br>Specie nº 123: Sooty mangabey<br>Specie nº 124: Stickleback<br>Specie nº 125: Amazon molly<br>Specie nº 126: Mouse DBA/2J<br>Specie nº 127: Mouse C57BL/6NJ<br>Specie nº 128: Dark-eyed junco<br>Specie nº 129: Chinese hamster CHOK1GS<br>Specie nº 130: Xenopus<br>Specie nº 131: Dingo<br>Specie nº 132: Dolphin<br>Specie nº 133: Ugandan red Colobus<br>Specie nº 134: Red-bellied piranha<br>Specie nº 135: Mouse Lemur<br>Specie nº 136: Midas cichlid<br>Specie nº 137: Caenorhabditis elegans<br>Specie nº 138: Tetraodon<br>Specie nº 139: Makobe Island cichlid<br>Specie nº 140: Platyfish<br>Specie nº 141: Shrew mouse<br>Specie nº 142: Chinese hamster CriGri<br>Specie nº 143: Long-tailed chinchilla<br>Specie nº 144: Hyrax<br>Specie nº 145: Mouse BALB/cJ<br>Specie nº 146: Naked mole-rat female<br>Specie nº 147: Ruff<br>Specie nº 148: Vervet-AGM<br>Specie nº 149: Goat<br>Specie nº 150: Bushbaby<br>Specie nº 151: Coelacanth<br>Specie nº 152: Pink-footed goose<br>Specie nº 153: Macaque<br>Specie nº 154: Marmoset<br>Specie nº 155: Turbot<br>Specie nº 156: Periophthalmus magnuspinnatus<br>Specie nº 157: Chinese softshell turtle<br>Specie nº 158: Leopard<br>Specie nº 159: Degu<br>Specie nº 160: Climbing perch<br>Specie nº 161: Tongue sole<br>Specie nº 162: Mainland tiger snake<br>Specie nº 163: Mouse CBA/J<br>Specie nº 164: Tilapia<br>Specie nº 165: Gelada<br>Specie nº 166: Prairie vole<br>Specie nº 167: Fugu<br>Specie nº 168: Australian saltwater crocodile<br>Specie nº 169: Rabbit<br>Specie nº 170: Wild yak<br>Specie nº 171: Red fox<br>Specie nº 172: Bicolor damselfish<br>Specie nº 173: Shrew<br>Specie nº 174: Mouse AKR/J<br>Specie nº 175: Greater amberjack<br>Specie nº 176: Chicken<br>Specie nº 177: Mouse NOD/ShiLtJ<br>Specie nº 178: Painted turtle<br>Specie nº 179: Olive baboon<br>Specie nº 180: Alpine marmot<br>Specie nº 181: Orangutan<br>Specie nº 182: Asian bonytongue<br>Specie nº 183: Squirrel<br>Specie nº 184: C.savignyi<br>Specie nº 185: Golden snub-nosed monkey<br>Specie nº 186: Northern pike<br>Specie nº 187: Turkey<br>Specie nº 188: Mouse LP/J<br>Specie nº 189: Damara mole rat<br>Specie nº 190: Tiger<br>Specie nº 191: Yellowtail amberjack<br>Specie nº 192: Ocean sunfish<br>Specie nº 193: American black bear<br>Specie nº 194: Tree Shrew<br>Specie nº 195: Opossum<br>Specie nº 196: Rat<br>Specie nº 197: Mouse 129S1/SvImJ<br>Specie nº 198: Human<br>Specie nº 199: Microbat<br></p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/listSpecies
+<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Information of species: </title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <fieldset>
+                            <legend style="color:lightgreen;font-family:arial;font-size:250%;text-align:center">Available species:
+</legend>
+                            <p style="color:black;font-family:arial;font-size:100%"> Specie: Flycatcher<br>Specie: American beaver<br>Specie: C.intestinalis<br>Specie: Central bearded dragon<br>Specie: Golden-collared manakin<br>Specie: Steppe mouse<br>Specie: White-throated sparrow<br>Specie: Kangaroo rat<br>Specie: Gibbon<br>Specie: Mouse FVB/NJ<br>Specie: Mummichog<br>Specie: Algerian mouse<br>Specie: Guppy<br>Specie: Clown anemonefish<br>Specie: Mongolian gerbil<br>Specie: Saccharomyces cerevisiae<br>Specie: Paramormyrops kingsleyae<br>Specie: Lesser Egyptian jerboa<br>Specie: Mouse C3H/HeJ<br>Specie: Orange clownfish<br>Specie: Hedgehog<br>Specie: Koala<br>Specie: Spiny chromis<br>Specie: Blue-crowned manakin<br>Specie: American mink<br>Specie: Guinea Pig<br>Specie: Horse<br>Specie: Armadillo<br>Specie: Burton's mouthbrooder<br>Specie: Crab-eating macaque<br>Specie: Japanese quail<br>Specie: Budgerigar<br>Specie: Naked mole-rat male<br>Specie: Ma's night monkey<br>Specie: Polar bear<br>Specie: Greater bamboo lemur<br>Specie: Sailfin molly<br>Specie: Mangrove rivulus<br>Specie: Great spotted kiwi<br>Specie: Argentine black and white tegu<br>Specie: Coquerel's sifaka<br>Specie: Donkey<br>Specie: Brazilian guinea pig<br>Specie: Duck<br>Specie: Zebrafish<br>Specie: Northern American deer mouse<br>Specie: Common canary<br>Specie: Golden Hamster<br>Specie: Channel catfish<br>Specie: Western mosquitofish<br>Specie: Swamp eel<br>Specie: Bengalese finch<br>Specie: Cat<br>Specie: Platypus<br>Specie: Little spotted kiwi<br>Specie: Tuatara<br>Specie: Shortfin molly<br>Specie: Drosophila melanogaster<br>Specie: Tasmanian devil<br>Specie: Zebra mbuna<br>Specie: Mouse WSB/EiJ<br>Specie: Ballan wrasse<br>Specie: Great Tit<br>Specie: Helmeted guineafowl<br>Specie: Lamprey<br>Specie: Spotted gar<br>Specie: Monterrey platyfish<br>Specie: Upper Galilee mountains blind mole rat<br>Specie: Pika<br>Specie: Sloth<br>Specie: Chimpanzee<br>Specie: Bolivian squirrel monkey<br>Specie: Ferret<br>Specie: Agassiz's desert tortoise<br>Specie: Arctic ground squirrel<br>Specie: Mouse PWK/PhJ<br>Specie: Japanese medaka HdrR<br>Specie: Megabat<br>Specie: Abingdon island giant tortoise<br>Specie: Black snub-nosed monkey<br>Specie: Mexican tetra<br>Specie: Lyretail cichlid<br>Specie: Mouse CAST/EiJ<br>Specie: Lesser hedgehog tenrec<br>Specie: Zebra Finch<br>Specie: Elephant<br>Specie: Capuchin<br>Specie: Anole lizard<br>Specie: Panda<br>Specie: Daurian ground squirrel<br>Specie: Pig<br>Specie: Mouse<br>Specie: Mouse NZO/HlLtJ<br>Specie: Spoon-billed sandpiper<br>Specie: Wallaby<br>Specie: Tiger tail seahorse<br>Specie: Cow<br>Specie: American bison<br>Specie: Mouse A/J<br>Specie: Japanese medaka HSOK<br>Specie: Bonobo<br>Specie: Gorilla<br>Specie: Emu<br>Specie: Okarito brown kiwi<br>Specie: Dog<br>Specie: Chilean tinamou<br>Specie: Sheepshead minnow<br>Specie: Chinese hamster PICR<br>Specie: Alpaca<br>Specie: Blue tit<br>Specie: Zig-zag eel<br>Specie: Pig-tailed macaque<br>Specie: Ryukyu mouse<br>Specie: Angola colobus<br>Specie: Sheep<br>Specie: Drill<br>Specie: Eastern happy<br>Specie: Japanese medaka HNI<br>Specie: Cod<br>Specie: Hagfish<br>Specie: Tarsier<br>Specie: Indian medaka<br>Specie: Sooty mangabey<br>Specie: Stickleback<br>Specie: Amazon molly<br>Specie: Mouse DBA/2J<br>Specie: Mouse C57BL/6NJ<br>Specie: Dark-eyed junco<br>Specie: Chinese hamster CHOK1GS<br>Specie: Xenopus<br>Specie: Dingo<br>Specie: Dolphin<br>Specie: Ugandan red Colobus<br>Specie: Red-bellied piranha<br>Specie: Mouse Lemur<br>Specie: Midas cichlid<br>Specie: Caenorhabditis elegans<br>Specie: Tetraodon<br>Specie: Makobe Island cichlid<br>Specie: Platyfish<br>Specie: Shrew mouse<br>Specie: Chinese hamster CriGri<br>Specie: Long-tailed chinchilla<br>Specie: Hyrax<br>Specie: Mouse BALB/cJ<br>Specie: Naked mole-rat female<br>Specie: Ruff<br>Specie: Vervet-AGM<br>Specie: Goat<br>Specie: Bushbaby<br>Specie: Coelacanth<br>Specie: Pink-footed goose<br>Specie: Macaque<br>Specie: Marmoset<br>Specie: Turbot<br>Specie: Periophthalmus magnuspinnatus<br>Specie: Chinese softshell turtle<br>Specie: Leopard<br>Specie: Degu<br>Specie: Climbing perch<br>Specie: Tongue sole<br>Specie: Mainland tiger snake<br>Specie: Mouse CBA/J<br>Specie: Tilapia<br>Specie: Gelada<br>Specie: Prairie vole<br>Specie: Fugu<br>Specie: Australian saltwater crocodile<br>Specie: Rabbit<br>Specie: Wild yak<br>Specie: Red fox<br>Specie: Bicolor damselfish<br>Specie: Shrew<br>Specie: Mouse AKR/J<br>Specie: Greater amberjack<br>Specie: Chicken<br>Specie: Mouse NOD/ShiLtJ<br>Specie: Painted turtle<br>Specie: Olive baboon<br>Specie: Alpine marmot<br>Specie: Orangutan<br>Specie: Asian bonytongue<br>Specie: Squirrel<br>Specie: C.savignyi<br>Specie: Golden snub-nosed monkey<br>Specie: Northern pike<br>Specie: Turkey<br>Specie: Mouse LP/J<br>Specie: Damara mole rat<br>Specie: Tiger<br>Specie: Yellowtail amberjack<br>Specie: Ocean sunfish<br>Specie: American black bear<br>Specie: Tree Shrew<br>Specie: Opossum<br>Specie: Rat<br>Specie: Mouse 129S1/SvImJ<br>Specie: Human<br>Specie: Microbat<br></p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/listSpecies?
+<!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Information of species: </title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <fieldset>
+                            <legend style="color:lightgreen;font-family:arial;font-size:250%;text-align:center">Available species:
+</legend>
+                            <p style="color:black;font-family:arial;font-size:100%"> Specie: Golden Hamster<br>Specie: Human<br>Specie: Opossum<br>Specie: Orange clownfish<br>Specie: Cod<br>Specie: Hyrax<br>Specie: Armadillo<br>Specie: Ocean sunfish<br>Specie: Mouse C57BL/6NJ<br>Specie: Polar bear<br>Specie: Platypus<br>Specie: Megabat<br>Specie: Turbot<br>Specie: Lesser hedgehog tenrec<br>Specie: Ma's night monkey<br>Specie: Alpine marmot<br>Specie: Arctic ground squirrel<br>Specie: Platyfish<br>Specie: Japanese medaka HSOK<br>Specie: Ballan wrasse<br>Specie: Northern pike<br>Specie: Lamprey<br>Specie: Climbing perch<br>Specie: Chinese hamster CriGri<br>Specie: Zebra mbuna<br>Specie: Chinese hamster CHOK1GS<br>Specie: Mongolian gerbil<br>Specie: American beaver<br>Specie: Little spotted kiwi<br>Specie: Lyretail cichlid<br>Specie: Monterrey platyfish<br>Specie: Mouse WSB/EiJ<br>Specie: Blue tit<br>Specie: Bushbaby<br>Specie: Mouse CBA/J<br>Specie: Goat<br>Specie: Golden snub-nosed monkey<br>Specie: Tongue sole<br>Specie: Pig-tailed macaque<br>Specie: Shortfin molly<br>Specie: Naked mole-rat female<br>Specie: Cat<br>Specie: Helmeted guineafowl<br>Specie: Tiger<br>Specie: Leopard<br>Specie: Sloth<br>Specie: Daurian ground squirrel<br>Specie: Guppy<br>Specie: Shrew mouse<br>Specie: Mouse Lemur<br>Specie: Eastern happy<br>Specie: Alpaca<br>Specie: Drill<br>Specie: Dark-eyed junco<br>Specie: Wallaby<br>Specie: Cow<br>Specie: Golden-collared manakin<br>Specie: Chimpanzee<br>Specie: Tasmanian devil<br>Specie: Prairie vole<br>Specie: Spoon-billed sandpiper<br>Specie: Red-bellied piranha<br>Specie: Marmoset<br>Specie: Rat<br>Specie: C.savignyi<br>Specie: Lesser Egyptian jerboa<br>Specie: Hedgehog<br>Specie: Bicolor damselfish<br>Specie: Swamp eel<br>Specie: Tiger tail seahorse<br>Specie: Panda<br>Specie: White-throated sparrow<br>Specie: Stickleback<br>Specie: Western mosquitofish<br>Specie: Algerian mouse<br>Specie: Pig<br>Specie: Burton's mouthbrooder<br>Specie: Agassiz's desert tortoise<br>Specie: Bonobo<br>Specie: Xenopus<br>Specie: Saccharomyces cerevisiae<br>Specie: Mouse A/J<br>Specie: Mouse 129S1/SvImJ<br>Specie: Greater amberjack<br>Specie: Emu<br>Specie: Mexican tetra<br>Specie: C.intestinalis<br>Specie: Gibbon<br>Specie: Steppe mouse<br>Specie: Abingdon island giant tortoise<br>Specie: Channel catfish<br>Specie: Capuchin<br>Specie: Long-tailed chinchilla<br>Specie: Mouse NOD/ShiLtJ<br>Specie: Angola colobus<br>Specie: Anole lizard<br>Specie: Bengalese finch<br>Specie: Horse<br>Specie: Degu<br>Specie: Periophthalmus magnuspinnatus<br>Specie: Mainland tiger snake<br>Specie: Drosophila melanogaster<br>Specie: Argentine black and white tegu<br>Specie: Squirrel<br>Specie: Red fox<br>Specie: Chinese hamster PICR<br>Specie: Black snub-nosed monkey<br>Specie: Mouse C3H/HeJ<br>Specie: Mouse FVB/NJ<br>Specie: Microbat<br>Specie: Coelacanth<br>Specie: Japanese medaka HNI<br>Specie: Painted turtle<br>Specie: Duck<br>Specie: Japanese quail<br>Specie: Rabbit<br>Specie: Greater bamboo lemur<br>Specie: Okarito brown kiwi<br>Specie: Wild yak<br>Specie: Mouse BALB/cJ<br>Specie: Elephant<br>Specie: Sheepshead minnow<br>Specie: Midas cichlid<br>Specie: Spiny chromis<br>Specie: Tilapia<br>Specie: Shrew<br>Specie: Paramormyrops kingsleyae<br>Specie: Pika<br>Specie: Koala<br>Specie: Crab-eating macaque<br>Specie: Asian bonytongue<br>Specie: Tree Shrew<br>Specie: Coquerel's sifaka<br>Specie: Pink-footed goose<br>Specie: Caenorhabditis elegans<br>Specie: Mouse PWK/PhJ<br>Specie: Dolphin<br>Specie: Olive baboon<br>Specie: Ruff<br>Specie: Vervet-AGM<br>Specie: American bison<br>Specie: Dog<br>Specie: Mouse AKR/J<br>Specie: Common canary<br>Specie: Turkey<br>Specie: Donkey<br>Specie: Ryukyu mouse<br>Specie: Chilean tinamou<br>Specie: Great spotted kiwi<br>Specie: Sooty mangabey<br>Specie: Naked mole-rat male<br>Specie: Mouse<br>Specie: Clown anemonefish<br>Specie: Great Tit<br>Specie: Damara mole rat<br>Specie: Gelada<br>Specie: Sheep<br>Specie: Yellowtail amberjack<br>Specie: Central bearded dragon<br>Specie: Indian medaka<br>Specie: Mouse LP/J<br>Specie: Gorilla<br>Specie: American black bear<br>Specie: Japanese medaka HdrR<br>Specie: Ugandan red Colobus<br>Specie: Mouse DBA/2J<br>Specie: Brazilian guinea pig<br>Specie: Fugu<br>Specie: Zebrafish<br>Specie: Blue-crowned manakin<br>Specie: Hagfish<br>Specie: Zebra Finch<br>Specie: Guinea Pig<br>Specie: Orangutan<br>Specie: Budgerigar<br>Specie: Tarsier<br>Specie: Mummichog<br>Specie: Macaque<br>Specie: Mouse CAST/EiJ<br>Specie: Northern American deer mouse<br>Specie: Kangaroo rat<br>Specie: Dingo<br>Specie: Zig-zag eel<br>Specie: Chinese softshell turtle<br>Specie: Makobe Island cichlid<br>Specie: Chicken<br>Specie: Flycatcher<br>Specie: Mangrove rivulus<br>Specie: Mouse NZO/HlLtJ<br>Specie: Spotted gar<br>Specie: American mink<br>Specie: Tuatara<br>Specie: Bolivian squirrel monkey<br>Specie: Ferret<br>Specie: Tetraodon<br>Specie: Amazon molly<br>Specie: Sailfin molly<br>Specie: Upper Galilee mountains blind mole rat<br>Specie: Australian saltwater crocodile<br></p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/listspecies
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ERROR </title>
+</head>
+<h1 style="color:lightred;font-family:arial;font-size:250%;text-align:center"> SORRY! THAT URL DID NOT WORK,TRY AGAIN!!</h1>
+<a href="/">Main page</a>
+</body>
+</html>
+
+·Try: http://localhost:8000/listSpecies?limit=-4
+ <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <title>Information of species: </title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <fieldset>
+                            <legend style="color:lightgreen;font-family:arial;font-size:250%;text-align:center">LIST OF AVAILABLE SPECIES:
+</legend>
+                            <p style="color:black;font-family:arial;font-size:100%"> Your limit must be an integer between 0 and 199 Try again</p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/listspecies?limit=
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ERROR </title>
+</head>
+<h1 style="color:lightred;font-family:arial;font-size:250%;text-align:center"> SORRY! THAT URL DID NOT WORK,TRY AGAIN!!</h1>
+<a href="/">Main page</a>
+</body>
+</html>
+
+----------------------------------------------------------
+
+FUNCTION /karyotype
+
+·Try: http://localhost:8000/karyotype?specie=mouse
+<!DOCTYPE html>
+                    <html lang = "en">
+                    <head>
+                        <meta charset = "UTF-8">
+                        <title>Information of karyotypes:</title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> KARYOTYPE</h1>
+                        <fieldset>
+                            <legend style="color:black;font-family:arial;font-size:150%;text-align:center">MOUSE</legend>
+                            <p style="color:black;font-family:arial;font-size:100%">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+X
+Y
+MT
+</p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/karyotype?specie=cow
+<!DOCTYPE html>
+                    <html lang = "en">
+                    <head>
+                        <meta charset = "UTF-8">
+                        <title>Information of karyotypes:</title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> KARYOTYPE</h1>
+                        <fieldset>
+                            <legend style="color:black;font-family:arial;font-size:150%;text-align:center">COW</legend>
+                            <p style="color:black;font-family:arial;font-size:100%">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+X
+MT
+</p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/karyotype?specie=
+<!DOCTYPE html>
+                    <html lang = "en">
+                    <head>
+                        <meta charset = "UTF-8">
+                        <title>Information of karyotypes:</title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> KARYOTYPE</h1>
+                        <fieldset>
+                            <legend style="color:black;font-family:arial;font-size:150%;text-align:center"></legend>
+                            <p style="color:black;font-family:arial;font-size:100%">Either we do not have the information for that specie or that specie does not exist! </p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/karyotype?specie=hello
+<!DOCTYPE html>
+                    <html lang = "en">
+                    <head>
+                        <meta charset = "UTF-8">
+                        <title>Information of karyotypes:</title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> KARYOTYPE</h1>
+                        <fieldset>
+                            <legend style="color:black;font-family:arial;font-size:150%;text-align:center">HELLO</legend>
+                            <p style="color:black;font-family:arial;font-size:100%">Either we do not have the information for that specie or that specie does not exist! </p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/karyotype?specie=2
+<!DOCTYPE html>
+                    <html lang = "en">
+                    <head>
+                        <meta charset = "UTF-8">
+                        <title>Information of karyotypes:</title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> KARYOTYPE</h1>
+                        <fieldset>
+                            <legend style="color:black;font-family:arial;font-size:150%;text-align:center">2</legend>
+                            <p style="color:black;font-family:arial;font-size:100%">Either we do not have the information for that specie or that specie does not exist! </p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
+
+·Try: http://localhost:8000/Karyotype?specie=mouse
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ERROR </title>
+</head>
+<h1 style="color:lightred;font-family:arial;font-size:250%;text-align:center"> SORRY! THAT URL DID NOT WORK,TRY AGAIN!!</h1>
+<a href="/">Main page</a>
+</body>
+</html>
+
+----------------------------------------------------------------
+
+FUNCTION /chromosomeLength
+
+·Try: http://localhost:8000/chromosomeLength?specie=mouse&chromo=18
+<!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Information of chromosome's length: </title>
+                        </head>
+                        <body style="background-color: lightyellow;">
+                            <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
+                            <fieldset>
+                                <p style="color:black;font-family:arial;font-size:150%;text-align:center">The length of the chromosome is: 90702639</p>
+                            </fieldset>
+                        <a href="/">Main page</a>
+                        </body>
+                        </html>
+
+·Try: http://localhost:8000/chromosomeLength?specie=mouse&chromo=55
+<!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Information of chromosome's length: </title>
+                        </head>
+                        <body style="background-color: lightyellow;">
+                            <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
+                            <fieldset>
+                                <p style="color:black;font-family:arial;font-size:150%;text-align:center">You introduced an incorrect value</p>
+                            </fieldset>
+                        <a href="/">Main page</a>
+                        </body>
+                        </html>
+
+·Try: http://localhost:8000/chromosomeLength?specie=23&chromo=55
+<!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Information of chromosome's length: </title>
+                        </head>
+                        <body style="background-color: lightyellow;">
+                            <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
+                            <fieldset>
+                                <p style="color:black;font-family:arial;font-size:150%;text-align:center">You introduced an incorrect value</p>
+                            </fieldset>
+                        <a href="/">Main page</a>
+                        </body>
+                        </html>
+
+·Try: http://localhost:8000/chromosomeLength?specie=cow&chromo=hello
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Information of chromosome's length: </title>
+                        </head>
+                        <body style="background-color: lightyellow;">
+                            <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
+                            <fieldset>
+                                <p style="color:black;font-family:arial;font-size:150%;text-align:center">You introduced an incorrect value</p>
+                            </fieldset>
+                        <a href="/">Main page</a>
+                        </body>
+                        </html>
+
+·Try: http://localhost:8000/chromosomelength?specie=cow&chromo=2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ERROR </title>
+</head>
+<h1 style="color:lightred;font-family:arial;font-size:250%;text-align:center"> SORRY! THAT URL DID NOT WORK,TRY AGAIN!!</h1>
+<a href="/">Main page</a>
+</body>
+</html>
+
+·Try: http://localhost:8000/chromosomeLength?species=cow&chromo=2
+
+                        <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Information of chromosome's length: </title>
+                        </head>
+                        <body style="background-color: lightyellow;">
+                            <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
+                            <fieldset>
+                                <p style="color:black;font-family:arial;font-size:150%;text-align:center">You introduced an incorrect value</p>
+                            </fieldset>
+                        <a href="/">Main page</a>
+                        </body>
+                        </html>
+
+·Try: http://localhost:8000/chromosomeLength?specie=homo_sapiens&chromo=X
+  <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Information of chromosome's length: </title>
+                        </head>
+                        <body style="background-color: lightyellow;">
+                            <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
+                            <fieldset>
+                                <p style="color:black;font-family:arial;font-size:150%;text-align:center">The length of the chromosome is: 156040895</p>
+                            </fieldset>
+                        <a href="/">Main page</a>
+                        </body>
+                        </html>
+
+·Try: http://localhost:8000/chromosomeLength?specie=homo_sapiens&chromo=x
+ <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Information of chromosome's length: </title>
+                        </head>
+                        <body style="background-color: lightyellow;">
+                            <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
+                            <fieldset>
+                                <p style="color:black;font-family:arial;font-size:150%;text-align:center">The length of the chromosome is: 156040895</p>
+                            </fieldset>
+                        <a href="/">Main page</a>
+                        </body>
+                        </html>
+
+ ·Try: http://localhost:8000/chromosomeLength?specie=homo_sapiens&chromos=X
+ <!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Information of chromosome's length: </title>
+                        </head>
+                        <body style="background-color: lightyellow;">
+                            <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
+                            <fieldset>
+                                <p style="color:black;font-family:arial;font-size:150%;text-align:center">You introduced an incorrect value</p>
+                            </fieldset>
+                        <a href="/">Main page</a>
+                        </body>
+                        </html>
+
+------------------------------------------------------------------
