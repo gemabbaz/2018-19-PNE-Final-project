@@ -174,7 +174,7 @@ class TestHandler(http.server.BaseHTTPRequestHandler): #Now, my class will have 
                 for i in range(len(list2)):
                     chromosomes += list2[i] + "\n"
             else: #in case the specie is not valid
-                chromosomes += "Either we do not have the information for that specie or that specie does not exist! "
+                chromosomes += "You introduced an invalid value; Try again! "
             print(message, chromosomes)
 
             content = """

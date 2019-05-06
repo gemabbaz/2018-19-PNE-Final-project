@@ -247,7 +247,7 @@ MT
                         <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> KARYOTYPE</h1>
                         <fieldset>
                             <legend style="color:black;font-family:arial;font-size:150%;text-align:center"></legend>
-                            <p style="color:black;font-family:arial;font-size:100%">Either we do not have the information for that specie or that specie does not exist! </p>
+                            <p style="color:black;font-family:arial;font-size:100%">You introduced an invalid value; Try again! </p>
                         </fieldset>
                     <a href="/">Main page</a>
                     </body>
@@ -264,7 +264,7 @@ MT
                         <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> KARYOTYPE</h1>
                         <fieldset>
                             <legend style="color:black;font-family:arial;font-size:150%;text-align:center">HELLO</legend>
-                            <p style="color:black;font-family:arial;font-size:100%">Either we do not have the information for that specie or that specie does not exist! </p>
+                            <p style="color:black;font-family:arial;font-size:100%">You introduced an invalid value; Try again! </p>
                         </fieldset>
                     <a href="/">Main page</a>
                     </body>
@@ -281,7 +281,7 @@ MT
                         <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> KARYOTYPE</h1>
                         <fieldset>
                             <legend style="color:black;font-family:arial;font-size:150%;text-align:center">2</legend>
-                            <p style="color:black;font-family:arial;font-size:100%">Either we do not have the information for that specie or that specie does not exist! </p>
+                            <p style="color:black;font-family:arial;font-size:100%">You introduced an invalid value; Try again! </p>
                         </fieldset>
                     <a href="/">Main page</a>
                     </body>
@@ -299,6 +299,59 @@ MT
 </body>
 </html>
 
+·Try: http://localhost:8000/KARYOTYPE?specie=mouse
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ERROR </title>
+</head>
+<h1 style="color:lightred;font-family:arial;font-size:250%;text-align:center"> SORRY! THAT URL DID NOT WORK,TRY AGAIN!!</h1>
+<a href="/">Main page</a>
+</body>
+</html>
+
+·Try: http://localhost:8000/karyotype?specie=human
+<!DOCTYPE html>
+                    <html lang = "en">
+                    <head>
+                        <meta charset = "UTF-8">
+                        <title>Information of karyotypes:</title>
+                    </head>
+                    <body style="background-color: lightyellow;">
+                        <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> KARYOTYPE</h1>
+                        <fieldset>
+                            <legend style="color:black;font-family:arial;font-size:150%;text-align:center">HUMAN</legend>
+                            <p style="color:black;font-family:arial;font-size:100%">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+X
+Y
+MT
+</p>
+                        </fieldset>
+                    <a href="/">Main page</a>
+                    </body>
+                    </html>
 ----------------------------------------------------------------
 
 FUNCTION /chromosomeLength
@@ -330,6 +383,22 @@ FUNCTION /chromosomeLength
                             <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
                             <fieldset>
                                 <p style="color:black;font-family:arial;font-size:150%;text-align:center">You introduced an incorrect value</p>
+                            </fieldset>
+                        <a href="/">Main page</a>
+                        </body>
+                        </html>
+
+·Try: http://localhost:8000/chromosomeLength?specie=human&chromo=22
+<!DOCTYPE html>
+                        <html lang="en">
+                        <head>
+                            <meta charset="UTF-8">
+                            <title>Information of chromosome's length: </title>
+                        </head>
+                        <body style="background-color: lightyellow;">
+                            <h1 style="color:lightgreen;font-family:arial;font-size:250%;text-align:center"> CHROMOSOME LENGTH</h1>
+                            <fieldset>
+                                <p style="color:black;font-family:arial;font-size:150%;text-align:center">The length of the chromosome is: 50818468</p>
                             </fieldset>
                         <a href="/">Main page</a>
                         </body>
